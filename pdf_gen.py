@@ -501,7 +501,7 @@ logger = logging.getLogger(__name__)
 
 # ── VPS / SFTP Configuration ────────────────────────────────────────────────
 VPS_CONFIG = {
-    "host":            "194.238.18.112",
+    "host":            "187.77.191.78",
     "port":            22,
     "username":        "root",
     "password":        "29032001@Abhi",
