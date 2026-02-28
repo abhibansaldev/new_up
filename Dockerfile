@@ -1,17 +1,17 @@
-FROM python:3.11-slim
+# FROM python:3.11-slim
 
-WORKDIR /app
+# WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    wget \
-    gnupg \
-    && pip install playwright \
-    && playwright install chromium \
-    && playwright install-deps chromium
+# RUN apt-get update && apt-get install -y \
+#     wget \
+#     gnupg \
+#     && pip install playwright \
+#     && playwright install chromium \
+#     && playwright install-deps chromium
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+# COPY requirements.txt .
+# RUN pip install -r requirements.txt
 
-COPY . .
+# COPY . .
 
-CMD ["python", "bot.py"]
+# CMD ["python", "bot.py"]
