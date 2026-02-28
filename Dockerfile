@@ -1,10 +1,16 @@
-FROM mcr.microsoft.com/playwright/python:v1.46.0-noble
+FROM python:3.11-slim
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    && pip install playwright \
+    && playwright install chromium \
+    && playwright install-deps chromium
+
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-RUN playwright install chromium
 
 COPY . .
 
